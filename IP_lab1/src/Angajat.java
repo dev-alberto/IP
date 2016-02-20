@@ -10,13 +10,24 @@ public abstract class Angajat {
     public Angajat()
     {
         nume=null;
-        adresa=null;
     }
 
     public abstract void setSkill(String newAdress);
     public String getNume()
     {
         return nume;
+    }
+    public void setNume(String newName)
+    {
+        nume=newName;
+    }
+    public long getIdAngajat()
+    {
+        return idAngajat;
+    }
+    protected void setIdAngajat(long newId) //cannot modify employee ID once you set it using the constructor
+    {
+        idAngajat=newId;
     }
     public String getAdresa()
     {
