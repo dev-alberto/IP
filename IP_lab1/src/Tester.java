@@ -2,9 +2,11 @@ import java.io.Serializable;
 
 public class Tester extends Angajat implements Serializable,Money {
     public static double wage=31000.2;
-public Tester(long id)
+    private String rol;
+public Tester(long id,String rol)
 {
     this.idAngajat=id;
+    this.rol=rol;
 }
     public void setRol(String newRol)
     {

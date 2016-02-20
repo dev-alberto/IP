@@ -10,19 +10,15 @@ public class Serialization {
         try {
 
 
-            Programator programator = new Programator(122);
-            programator.setNume("Alberto");
-            programator.setRol("Java master");
-            programator.setAdresa("In buricu Bucurestiului");
+            Angajat angajat=new Programator(122,"Alberto","java","buricul pamantului");
             FileOutputStream fos = new FileOutputStream("ser/emp.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(programator);
+            oos.writeObject(angajat);
             oos.close();
             fos.close();
-            //System.out.print(programator.toString());
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.print("Obiect serializat");
     }
 }

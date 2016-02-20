@@ -6,15 +6,15 @@ import java.io.*;
  */
 public class Desirialization {
     public static void main(String[] args) {
-        Programator test = null;
+        Angajat test = null;
         try {
             FileInputStream fis = new FileInputStream("ser/emp.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            test = (Programator) ois.readObject();
+            test = (Angajat) ois.readObject();
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
         System.out.print("Programator deserializat!!!\n");
-        System.out.print(test.toString());
+        System.out.print(test);
     }
 }

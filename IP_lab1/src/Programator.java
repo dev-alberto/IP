@@ -3,10 +3,11 @@ import java.io.Serializable;
 
  public class Programator extends Angajat implements Serializable,Money {
      private final double wage=50000.0;
+     private String rol;
 
-    public Programator(long idAngajat)
+    public Programator()
     {
-        this.idAngajat=idAngajat;
+        rol=null;
     }
     public Programator(long idAngajat,String nume,String skill,String adresa)
     {
@@ -15,7 +16,7 @@ import java.io.Serializable;
         this.rol=skill;
         this.adresa=adresa;
     }
-    @Override
+
     public void setRol(String newRol) {
         this.rol=newRol; //aici vom face un switch cu limbaje de programare
     }
@@ -32,4 +33,5 @@ import java.io.Serializable;
      public double getMonthlyWage() {
          return wage/12;
      }
+
  }

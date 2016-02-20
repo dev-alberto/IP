@@ -3,18 +3,20 @@ import java.io.Serializable;
 /**
  * Created by Alberto&Dan on 2/19/2016.
  */
-public abstract class Angajat implements Serializable {
+public class Angajat implements Serializable {
     protected String nume;
     protected long idAngajat;
-    protected String rol;
     protected String adresa;
 
     public Angajat()
     {
        idAngajat=0;
     }
-
-    public abstract void setRol(String newRol);
+    public Angajat(long idAngajat,String nume)
+    {
+        this.nume=nume;
+        this.idAngajat=idAngajat;
+    }
     public String getNume()
     {
         return nume;
