@@ -11,14 +11,10 @@ public class Desirialization {
             FileInputStream fis = new FileInputStream("ser/emp.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
             test = (Programator) ois.readObject();
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
-        catch(IOException i)
-        {
-            i.printStackTrace();
-        }
         System.out.print("Programator deserializat!!!\n");
-        //nu merge inca deserializarea...
+        System.out.print(test.toString());
     }
 }

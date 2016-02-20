@@ -12,7 +12,7 @@ public class Serialization {
 
             Programator programator = new Programator(122);
             programator.setNume("Alberto");
-            programator.setSkill("Java master");
+            programator.setRol("Java master");
             programator.setAdresa("In buricu Bucurestiului");
             FileOutputStream fos = new FileOutputStream("ser/emp.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);

@@ -1,18 +1,20 @@
+import java.io.Serializable;
+
 /**
  * Created by Alberto&Dan on 2/19/2016.
  */
-public abstract class Angajat {
+public abstract class Angajat implements Serializable {
     protected String nume;
     protected long idAngajat;
-    protected String skill;
+    protected String rol;
     protected String adresa;
 
     public Angajat()
     {
-        nume=null;
+       idAngajat=0;
     }
 
-    public abstract void setSkill(String newAdress);
+    public abstract void setRol(String newRol);
     public String getNume()
     {
         return nume;

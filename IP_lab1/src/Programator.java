@@ -1,9 +1,8 @@
 import java.io.Serializable;
 
-/**
- * Created by alber_000 on 2/19/2016.
- */
- public class Programator extends Angajat implements Serializable {
+
+ public class Programator extends Angajat implements Serializable,Money {
+     private final double wage=50000.0;
 
     public Programator(long idAngajat)
     {
@@ -13,20 +12,24 @@ import java.io.Serializable;
     {
         this.idAngajat=idAngajat;
         this.nume=nume;
-        this.skill=skill;
+        this.rol=skill;
         this.adresa=adresa;
     }
     @Override
-    public void setSkill(String newSkill) {
-        this.skill=newSkill;
+    public void setRol(String newRol) {
+        this.rol=newRol; //aici vom face un switch cu limbaje de programare
     }
-    public String getSkill()
+    public String getRol()
     {
-        return skill;
+        return rol;
     }
     public String toString()
     {
-        return skill+ " " + idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa;
+        return rol+ " " + idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa +  " ,castiga " + this.getMonthlyWage();
     }
 
-}
+     @Override
+     public double getMonthlyWage() {
+         return wage/12;
+     }
+ }
