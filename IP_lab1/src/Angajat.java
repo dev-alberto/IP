@@ -41,5 +41,9 @@ public class Angajat implements Serializable {
     {
         adresa=newAdress;
     }
+    public String toString()
+    {
+        return  idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa;
+    }
 
 }

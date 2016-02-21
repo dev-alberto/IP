@@ -5,10 +5,6 @@ import java.io.Serializable;
      private final double wage=50000.0;
      private String rol;
 
-    public Programator()
-    {
-        rol=null;
-    }
     public Programator(long idAngajat,String nume,String skill,String adresa)
     {
         this.idAngajat=idAngajat;
