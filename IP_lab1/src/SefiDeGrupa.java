@@ -1,13 +1,18 @@
 import java.io.Serializable;
+import java.util.*;
 
-public class SefiDeGrupa extends Angajat implements Serializable,Money {
-    @Override
-    public double getMonthlyWage() {
-        return 0;
+public class SefiDeGrupa extends SefiDeEchipa implements Serializable
+{
+    List<SefiDeEchipa> sefiDeEchipas=new ArrayList<>();
+
+    public SefiDeGrupa(){}
+    public SefiDeGrupa(SefiDeEchipa [] sefi)
+    {
+        for(int i=0;i<this.sefiDeEchipas.size();i++)
+            this.sefiDeEchipas.add(sefi[i]);
     }
-
-    @Override
-    public void setRol(String newRol) {
-
+    public void addEmployee(SefiDeEchipa p)
+    {
+        this.sefiDeEchipas.add(p);
     }
 }

@@ -1,9 +1,10 @@
 import java.io.Serializable;
 
 
- public class Programator extends Angajat implements Serializable,Money {
+ public class Programator extends Angajat implements Serializable,Money { //trebuie sa adaugam testarii tot in clasa asta
      private final double wage=50000.0;
      private String rol;
+     public Programator(){}
 
     public Programator(long idAngajat,String nume,String skill,String adresa)
     {
