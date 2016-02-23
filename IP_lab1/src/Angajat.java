@@ -3,7 +3,8 @@ import java.io.*;
 /**
  * Created by Alberto&Dan on 2/19/2016.
  */
-public class Angajat implements Serializable {
+public class Angajat implements Serializable
+{
     protected String nume;
     protected long idAngajat;
     protected String adresa;
@@ -38,7 +39,7 @@ public class Angajat implements Serializable {
     {
         return  idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa;
     }
-    public static void serializeObject(Angajat o) throws FileNotFoundException
+    public static void serializeObject(Object o) throws FileNotFoundException
     {
         try
         {
@@ -65,6 +66,7 @@ public class Angajat implements Serializable {
             e.printStackTrace();
         }
     }
+
     /*
     public static void serializeArray(Object [] objectArray,int size) throws FileNotFoundException
     {

@@ -1,13 +1,23 @@
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class SefiDeEchipa extends Angajat implements Serializable,Money {
-    @Override
-    public double getMonthlyWage() {
-        return 0;
+public class SefiDeEchipa extends Programator implements Serializable
+{
+    List<Programator> programators=new ArrayList<>();
+    public SefiDeEchipa(){};
+    public SefiDeEchipa(Programator [] arr) // Cand creem un Sef de echipa, practic noi ii dam la constructor lista de programatori
+    {
+        for(int i=0;i<this.programators.size();i++)
+            this.programators.add(arr[i]);
     }
 
-    @Override
-    public void setRol(String newRol) {
-
+    public void addEmployee(Programator p)
+    {
+        this.programators.add(p);
+    }
+    public String toString() {
+    return "Lista de programatori: " + programators;
     }
 }
