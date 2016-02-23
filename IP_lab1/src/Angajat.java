@@ -3,8 +3,9 @@ import java.io.*;
 /**
  * Created by Alberto&Dan on 2/19/2016.
  */
-public interface Angajat
+public abstract class Angajat //aici putem sa o facem clasa abstracta sau interfata
 {
+    public abstract void setRole(String param);
     static void serializeObject(Object o) throws FileNotFoundException
     {
         try

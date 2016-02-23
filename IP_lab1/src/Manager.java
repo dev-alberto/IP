@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Manager extends SefiDeGrupa implements Serializable,Angajat
+public class Manager extends SefiDeGrupa implements Serializable
 {  //singleton class
 
     private long idAngajat;

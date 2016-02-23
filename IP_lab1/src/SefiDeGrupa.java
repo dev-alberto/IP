@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.*;
 
-public class SefiDeGrupa extends SefiDeEchipa implements Serializable,Angajat
+public class SefiDeGrupa extends SefiDeEchipa implements Serializable
 {
     List<SefiDeEchipa> sefiDeEchipas=new ArrayList<>();
 
