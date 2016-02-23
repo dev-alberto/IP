@@ -12,10 +12,12 @@ public class Main
         ang[1] = new Programator(122, "Automat","sds","sdaxxxxx");
         ang[2] = new Programator(222, "sdsassss", "sdsafdccc", "sdsds");
         SefiDeEchipa sefiDeEchipa=new SefiDeEchipa(ang);
-        System.out.print(sefiDeEchipa); //nu merge calumea metoda toString 
+        //System.out.print(sefiDeEchipa.toString()); //nu merge calumea metoda toString
         //Programator programator=new Programator(22,"sds","sdsd","Sdsadasd");
-       // sefiDeEchipa.addEmployee(programator);
-       // Angajat.serializeObject(sefiDeEchipa);
-        //Angajat.deserializeObject();
+        //Programator prgramator2=new Programator(33,"sds","sdsd","Sdsadassdad");
+        //sefiDeEchipa.addEmployee(programator);
+        //sefiDeEchipa.addEmployee(prgramator2);
+        Angajat.serializeObject(sefiDeEchipa);
+        Angajat.deserializeObject();
     }
 }

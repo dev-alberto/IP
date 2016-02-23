@@ -1,11 +1,13 @@
 import java.io.Serializable;
 
 
- public class Programator extends Angajat implements Serializable,Money { //trebuie sa adaugam testarii tot in clasa asta
-     private final double wage=50000.0;
+ public class Programator implements Serializable,Angajat { //trebuie sa adaugam testarii tot in clasa asta
+    // private final double wage=50000.0;
      private String rol;
+     private long idAngajat;
+     private String nume;
+     private String adresa;
      public Programator(){}
-
     public Programator(long idAngajat,String nume,String skill,String adresa)
     {
         this.idAngajat=idAngajat;
@@ -23,12 +25,7 @@ import java.io.Serializable;
     }
     public String toString()
     {
-        return rol+ " " + idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa +  " ,castiga " + this.getMonthlyWage();
+       return rol+ " " + idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa;
     }
-
-     @Override
-     public double getMonthlyWage() {
-         return wage/12;
-     }
 
  }

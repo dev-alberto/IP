@@ -3,8 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Manager extends SefiDeGrupa implements Serializable
+public class Manager extends SefiDeGrupa implements Serializable,Angajat
 {  //singleton class
+
+    private long idAngajat;
+    private String nume;
+    private String adresa;
 
     private static Manager manager=new Manager(100,"Alberto","undeva fain");
     List<SefiDeGrupa> angajats=new ArrayList<>();
@@ -17,7 +21,7 @@ public class Manager extends SefiDeGrupa implements Serializable
     }
     public void setAngajats(SefiDeGrupa [] a)
     {
-        for(int i=0;i<angajats.size();i++)
+        for(int i=0;i<a.length;i++)
             angajats.add(a[i]);
     }
     public static Manager getManager()
