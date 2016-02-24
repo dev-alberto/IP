@@ -4,7 +4,7 @@
 exercitiul 1
 
 First version of implementation.
-![Alt text](/inheritance00.png?raw=true "First Draft")
+![Screenshot](/inheritance00.png)
 
 Last implementation.
 ![Alt text](/inheritance01.png?raw=true)
