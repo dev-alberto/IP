@@ -6,11 +6,10 @@ import java.util.List;
 public class Manager extends SefiDeGrupa implements Serializable
 {  //singleton class
 
-    private long idAngajat;
     private String nume;
     private String adresa;
 
-    private static Manager manager=new Manager(100,"Alberto","undeva fain");
+    private static Manager manager=new Manager(10001,"Alberto","Strada Toma Cozma");
     List<SefiDeGrupa> angajats=new ArrayList<>();
 
     private Manager(long idAngajat,String nume,String adresa)
@@ -30,7 +29,7 @@ public class Manager extends SefiDeGrupa implements Serializable
     }
     public String toString()
     {
-        return "Angajatul cu id "  + idAngajat+ " " + ",cu numele " + nume + " " + ", sta la adresa" + " " + adresa  + " are subordonati pe " + angajats ;
+        return "Angajatul cu id "  + idAngajat+ " " + ",cu numele " + nume + " " + ", sta la adresa" + " " + adresa  + " si are subordonati pe: " + "\n" + angajats ;
     }
 
 }

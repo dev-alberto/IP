@@ -4,12 +4,14 @@ import java.util.List;
 
 public class SefiDeEchipa extends ProgramatorSiTester implements Serializable
 {
+    protected long idAngajat;
     List<ProgramatorSiTester> programators=new ArrayList<>();
     public SefiDeEchipa(){}
-    public SefiDeEchipa(ProgramatorSiTester[] arr) // Cand creem un Sef de echipa, practic noi ii dam la constructor lista de programatori
+    public SefiDeEchipa(long id,ProgramatorSiTester[] arr) // Cand creem un Sef de echipa, practic noi ii dam la constructor lista de programatori
     {
         for(int i=0;i<arr.length;i++)
             this.programators.add(arr[i]);
+        this.idAngajat=id;
     }
 
     public void addEmployee(ProgramatorSiTester p)
@@ -17,6 +19,6 @@ public class SefiDeEchipa extends ProgramatorSiTester implements Serializable
         this.programators.add(p);
     }
     public String toString() {
-    return "Lista de programatori: " + programators;
+    return "Seful de echipa cu id-ul " + idAngajat +  " are lista de subordonati: " + "\n" + programators + "\n";
     }
 }

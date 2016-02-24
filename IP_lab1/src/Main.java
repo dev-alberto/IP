@@ -7,29 +7,24 @@ import java.util.Arrays;
 public class Main
 {
     public static void main(String[] args) throws FileNotFoundException {
-
-
-        ProgramatorSiTester[] ang = new ProgramatorSiTester[2];
-        ProgramatorSiTester[] ang2=new ProgramatorSiTester[2];
-        ang[0] = new ProgramatorSiTester(1,"Alb","sds",false);
+        ProgramatorSiTester[] ang = new ProgramatorSiTester[4];
+        ProgramatorSiTester[] ang2=new ProgramatorSiTester[4];
+        ang[0] = new ProgramatorSiTester(1,"Victor","Alea Rozelor",false);
         ang[0].setRole("java");
-        ang[1] = new ProgramatorSiTester(2, "ASZ","sds",false);
-        ang2[0] = new ProgramatorSiTester(3, "sdsassss", "Undeva", true);
-        ang2[1]=new ProgramatorSiTester(22,"sds","sdsd",false);
+        ang[1] = new ProgramatorSiTester(2, "Stefan","In locuri mai bune",false);
+        //ang[2] =new ProgramatorSiTester(14,"New Hire", "in centru",true);
+        ang2[0] = new ProgramatorSiTester(3, "Andrei", "Undeva", true);
+        ang2[1]=new ProgramatorSiTester(22,"Moloz","nictor",false);
         ang2[1].setRole("c++");
-        SefiDeEchipa [] sefiDeEchipa=new SefiDeEchipa[2];
-        sefiDeEchipa[0]=new SefiDeEchipa(ang);
-        sefiDeEchipa[1]=new SefiDeEchipa(ang2);
-        SefiDeGrupa[] sefiDeGrupa=new SefiDeGrupa[2];
-        sefiDeGrupa[0]=new SefiDeGrupa(sefiDeEchipa);
-        sefiDeGrupa[1]=null;
+        SefiDeEchipa [] sefiDeEchipa=new SefiDeEchipa[3];
+        sefiDeEchipa[0]=new SefiDeEchipa(100,ang);
+        sefiDeEchipa[1]=new SefiDeEchipa(101,ang2);
+        //sefiDeEchipa[0].addEmployee(ang[2]);
+        SefiDeGrupa[] sefiDeGrupa=new SefiDeGrupa[3];
+        sefiDeGrupa[0]=new SefiDeGrupa(200,sefiDeEchipa);
         Manager manager=Manager.getManager();
         manager.setAngajats(sefiDeGrupa);
-        System.out.print(manager);
-        //System.out.print(Arrays.toString(sefiDeGrupa));
-        //System.out.print(Arrays.toString(sefiDeEchipa));
-       // System.out.print(programator);
-        //ProgramatorSiTester prgramator2=new ProgramatorSiTester(33,"sds","sdsd","Sdsadassdad");
-
+        Angajat.serializeObject(manager);
+        Angajat.deserializeObject();
     }
 }

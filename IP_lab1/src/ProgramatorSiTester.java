@@ -24,22 +24,25 @@ import java.io.Serializable;
      }
      public void setRole(String specializare)
      {
-         if (flag) {
+         if (flag)
+         {
+             rol="tester";
              if("automat".equals(specializare))
-                 rol="tester automat";
+                 rol=rol+"automat";
              else if("manual".equals(specializare))
-                 rol="tester manual";
+                 rol=rol+"manual";
          }
          else {
+             rol="programator";
              if("c++".equals(specializare))
-                 rol="programator in c++";
+                 rol=rol+" in c++";
              else if("java".equals(specializare))
-                 rol="programator in java";
+                 rol= rol+ " in java";
              }
          }
 
     public String toString()
     {
-       return flag + " " + idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa + " "+ rol;
+       return  idAngajat+ " " + ",cu numele " + nume + " " + ",sta la adresa" + " " +  " " + adresa + " si este "+ rol + "\n";
     }
  }
