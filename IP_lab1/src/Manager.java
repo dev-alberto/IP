@@ -30,7 +30,7 @@ public class Manager extends SefiDeGrupa implements Serializable
     }
     public String toString()
     {
-        return "Angajatul cu id "  + idAngajat+ " " + ",cu numele " + nume + " " + ", sta la adresa" + " " + adresa + " si castiga" ;
+        return "Angajatul cu id "  + idAngajat+ " " + ",cu numele " + nume + " " + ", sta la adresa" + " " + adresa  + " are subordonati pe " + angajats ;
     }
 
 }

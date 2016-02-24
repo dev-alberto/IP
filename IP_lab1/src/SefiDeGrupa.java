@@ -15,4 +15,8 @@ public class SefiDeGrupa extends SefiDeEchipa implements Serializable
     {
         this.sefiDeEchipas.add(p);
     }
+    public String toString()
+    {
+        return "Lista de sefi de echipa care sunt subordonati mie: " + sefiDeEchipas;
+    }
 }
