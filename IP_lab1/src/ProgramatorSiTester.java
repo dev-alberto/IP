@@ -32,14 +32,15 @@ import java.io.Serializable;
              else if("manual".equals(specializare))
                  rol=rol+"manual";
          }
-         else {
+         else
+         {
              rol="programator";
              if("c++".equals(specializare))
                  rol=rol+" in c++";
              else if("java".equals(specializare))
                  rol= rol+ " in java";
-             }
          }
+     }
 
     public String toString()
     {
