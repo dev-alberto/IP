@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class Main
 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException
+    {
         ProgramatorSiTester[] ang = new ProgramatorSiTester[4];
         ProgramatorSiTester[] ang2=new ProgramatorSiTester[4];
         ang[0] = new ProgramatorSiTester(1,"Victor","Alea Rozelor",false);

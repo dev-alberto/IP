@@ -1,0 +1,118 @@
+derivari sageti albe
+asocieri
+compozitii/agregari
+
+Sistem de management google drive
+
+
+
+
+Actori::
+
+Google Drive developer
+Google Drive sysadmin - are grija de servere
+Google Drive support - rezolva bug-uri raportate de clienti
+Resure umane - angajeaza persoane la firma
+Finante - gestionarea venitului
+
+^Parti din firma
+
+Proprietarul - cel care a uploadat primul (are o parte privata si una publica care poate fi modificata de colaboratori)
+			are toate drepturile asupra contentului
+Colaboratori -trebuie sa aibe cont
+			au drept de write asupra unor fisiere stocate de un Proprietar
+Beneficiari simpli -cei cu cont
+				   -cei fara cont
+		     au numai read-only
+			 
+Cei cu cont: ->utilizatori gratis (limita mica de upload)
+			 ->utilizatori premium
+^Utilizatori				   
+				  
+
+
+
+
+				  
+
+Actionari::
+	Firma: pune la dispozitia utilizatorilor un site on-line in care utilizatorii pot sa-si creeze sau nu un cont si sa uploadeze fisiere.
+		   
+    Utilizatori:
+		Odata cu crearea contului se pot gestiona fisierele asupra carora userul are drept deplin (este Owner) si poate da drepturi de acces
+		   asupra anumitor fisiere unor utilizatori (cu cont sau fara) si/sau poate da drept de write anumitor utilizatori.
+		   
+		   Un utilizator e reprezentat de o singura persoana.
+	
+
+	
+Obiective::
+	Firma: satifsfactia clientului
+		
+	Proprietar: distribuirea fisierelor intr-un mediu on-line
+	Colaborator: gestionarea fisierelor unui proprietar si asigurarea calitatii fisierelor in cazul in care acesta are drepturile necesare
+	Beneficiar simplu: acces la informatii.
+
+	
+	
+	
+	
+			
+Scenarii::
+	Scenariu 1 -- Proiect in comun cu 4 persoane --
+	Obiectiv: O persoana doreste sa lucreze la un proiect in comun cu inca 3 persoane si anumite fisiere.
+	
+	Pasi:
+		-isi creeaza un cont gratis (upload limitat ex:5 GB) 
+		-da drepturi de write la cele 3 persoane care au cont, ei fiind colaboratori la proiect, 
+			putand astfel sa modifice fisierele la care au acces si sa uploadeze si ei anumite fisiere
+		-daca doreste marirea limitei de stocare acesta va achizitiona un cont premium
+	Extensii:
+		-daca se intampina o eroare (ex: pierdere de date,pierdere cont), atunci proprietarul va contacta departamentul de support pentru rezolvarea bug-urilor
+		
+	
+
+
+	
+		
+	Scenariu 2 -- Backup la fisiere --
+	Obiectiv: un user doreste un backup la anumite fisiere importante intr-un mediu online sigur
+	Pasi: -isi creeaza un cont (daca doreste spatiu de stocare mai mult, acesta isi va achizitiona un cont premium)
+		  -uploadeaza fisierele dorite
+		  -nu da nici-un drept nimanui, astfel numai ownerul avand acces de read si write la fisiere
+	Extensii:
+		-contul este spart. Pentru recuperarea contului se va contacta supportul pentru asigurarea identitatii proprietarului prin anumite intrebari de securitate
+			indroduse la crearea contului
+		-exista o limita superioara de spatiu pentru utilizatori premium (ex:10 Tb)
+	
+
+
+
+
+	
+	Scenariu 3 -- Distribuire de fisiere la o masa larga de persoane--
+	Obiectiv: un user doreste distribuire pe scara larga a unui fisiere
+	
+	Pasi:
+		-acesta isi creeaza un cont
+		-uploadeaza fisierele
+		-pe fisierele propriu-zise da drept de citire public (oricine cu cont sau fara poate avea acces de read la fisier)
+		-nimeni altcineva inafara de proprietar nu primeste drept de scriere
+	Extensii:
+		-un proprietar poate incarca fisiere malitioase , acestea cauzand probleme oricui face download, sau fisiere care incalca drepturi de autor. Pentru rezolvare se va contacta
+			sysadmin-ul care va sterge fisierele in cauza si va bloca contul daca va fi necesar
+		
+
+
+		
+		
+	Scenariu 4 -- Sincronizare cu un API--
+	Obiectiv: crearea de alte aplicatii care se folosesc de aplicatia firmei
+	
+	Pasi:
+		-un developer are acces pe site la API si se foloseste de el in crearea aplicatiei
+	Extensii:
+		-API-ul poate sa nu fie suficient de bine dezvoltat si sa afecteze imaginea firmei
+	
+
+
