@@ -1,3 +1,5 @@
+package GUI;
+
 import java.util.Vector;
 
 public class DisplayServer extends GUIcomponent {
@@ -6,7 +8,7 @@ public class DisplayServer extends GUIcomponent {
     public Vector  myWindowManager;
     /**
    * 
-   * @element-type GUI
+   * @element-type GUI.GUI
    */
   public Vector  myGUI;
 

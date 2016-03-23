@@ -1,3 +1,5 @@
+package Securite;
+
 import java.util.Vector;
 
 public class Autentificare {

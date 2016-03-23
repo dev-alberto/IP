@@ -1,8 +1,9 @@
+package Managers;
+
 import java.util.Vector;
 
-public class Signals {
+public class MemoryManager {
 
     public Vector  myKernel;
-    public Vector  myAplicatie;
 
 }
