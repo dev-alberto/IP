@@ -1,5 +1,9 @@
 # IP
-Probleme laboratorul 6
+## Lab 6
 
-## Diagrama initiala 
-![](lab06UMLclass.png)
+Requirements: N/A
+
+### Initial diagram
+
+First version of implementation.
+![diagram](lab06UMLclass.png)
